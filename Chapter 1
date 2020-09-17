@@ -1,0 +1,235 @@
+\chapter{Introduction}
+
+\ifpdf
+\graphicspath{{Chapter1/Figs/}}
+\else
+\graphicspath{{Chapter1/Figs}}
+\fi
+
+%\section{Motivation and goal setting}
+ Additive manufacturing also known as 3D printing, is a process of adding the material layer upon layer until the desired shape is achieved; contrary to traditional manufacturing processes which involves subtraction of material. This kind of  process reduces the  waste and  fabrication results in a near to finish job. As this process do not have design constraints as in traditional methods, complex shapes can be manufactured.
+ 
+ 
+ 
+ In recent years, Additive Manufacturing method like  Selective electron beam melting (EBM) and Selective laser melting (SLM) made a rapid development with respect to process optimization and property characterization \cite{gibson2014additive}. Mechanical properties such as fracture resistance, fatigue behavior, corrosion resistance and bio-compatibility of AM parts drives the interest and application in various fields like aero-space, medical  and automotive industry \cite{gibson2014additive}. 
+ 
+ Further development in 3D scanning techniques like Computer Tomography (CT) and Magnetic Resonance Imaging (MRI) allows to scan and produce complex CAD models. This grants the manufacturing of a complex and exclusive to patient bone replacement AM parts. As an example, acetabular cup is shown in figure \ref{fig:acetabular}.
+  
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=3in]{Chapter1/Figs/medi_am_1.png}
+ 	\caption{Custom made titanium acetabular cup manufactured using AM \cite{sercombe2008heat}}
+ 	\label{fig:acetabular}
+ \end{figure}
+
+ In aviation industry, intricate 3D CAD models can be used to manufacture complex parts such as fuel nozzle manufactured by GE aviation and a hinge bracket manufactured by Airbus  shown in figure \ref{fig:aviation} \cite{gibson2014additive}.
+ 
+ \begin{figure}[H]
+	\centering
+	\subfloat[]{\includegraphics[width=3in]{Chapter1/Figs/nozzle.png}}
+	\hfill
+	\subfloat[]{\includegraphics[width=3in]{Chapter1/Figs/a320_brack.png}}
+	\hfill
+ 
+	\caption{\textbf{(a)} GE aviation 2nd generation fuel nozzle  \cite{gibson2014additive} , \textbf{(b)} Airbus A320 nacelle hinge bracket  \cite{gibson2014additive}}
+\label{fig:aviation}
+\end{figure}
+
+
+Parts manufactured from AM may have internal and surface defects. Such un-intended defects can compromise integrity and working capacity of the part and may leads to catastrophic failure.
+
+Application of AM parts in sensitive fields like aviation and medical science encourages us to investigate more about such defects. Information regarding defects in AM parts prior its mechanical testing allows us to understand better about the effects of such defects.
+
+
+
+  
+  \section{Defects in Additive Manufacturing  parts}
+  
+ Before investigating defects, it is important to understand its cause. A typical AM process like SLM involves many different physical processes which are briefly described in figure \ref{fig:pheno}.
+  
+The heat from the melting beam is absorbed by the atomized powder which results in melting pool. Wetting characteristics of the powder and  dynamic nature of the  melting pool cumulatively affect the re solidification surface.  This follows with an irregular thickness of the next layer which lead to un-intended defects.\cite{li2016critical}.
+  
+  
+   The layer-wise melting process is quite complex and also dependent on many other aspects such as  velocity and power of the beam used for melting. Topological factor such distribution of the powder in preceding layer also affects the melting process \cite{sercombe2008heat}. The sensitivity of all such parameters may yield in different types of defects in a 3D printed part.
+   
+   \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=5in]{Chapter1/Figs/phoenomina.png}
+  	\caption{A typical AM process \cite{sercombe2008heat}}
+  	\label{fig:pheno}
+  \end{figure}
+  
+  
+  Some crucial internal defects known as cracks, pores, inclusion and lack of fusion are shown in figure \ref{fig:Types_defect}. Pores are nearly spherical shaped air bubble formed due to the entrapped air in gas atomized particle. On the other hand Inclusion is the presence of a foreign material inside an actual manufactured part. Lack of fusion is caused due low beam power which results in low laser penetration depth during melting process. This results in irregular shaped gaps in material. The irregularity in shape of the defect cause due to lack of fusion can be seen as a key to distinguish between porosity and lack of fusion. 
+   \begin{figure}[H]
+  	\centering
+  	\subfloat[]{\includegraphics[width=2.33in]{Chapter1/Figs/Pore_circular.png}}
+  	\hfill
+  	\subfloat[]{\includegraphics[width=2.5in]{Chapter1/Figs/lack_of_fusion.png}}
+  	\hfill
+  	\subfloat[]{\includegraphics[width=2.5in]{Chapter1/Figs/crack.png}}
+  	\hfill
+  	\subfloat[]{\includegraphics[width=2.5in]{Chapter1/Figs/inclu.png}}
+  	
+  	
+  	\caption{\textbf{(a)}Circular pore in a specimen manufactured from AM process \cite{bauereiss2014defect} , \textbf{(b)} irregular cavities form in built direction \cite{bauereiss2014defect} ,\textbf{(c)} crack in tungsten sample from AM \cite{bauereiss2014defect}, \textbf{(d)} Typical inclusion in a AM sample }
+  	\hfill
+  	\label{fig:Types_defect}
+  \end{figure}
+  
+  Cracks are the result of residual stresses which is a process defect caused due to the improper cooling rate of melting pool. Out of all internal defects, cracks are considered as crucial parameter in determining the life cycle of AM parts \cite{sercombe2008heat}.
+  
+  Stair case effect and partial melting of powder layer adhered to the surface can be seen as a legitimate cause for the rough surface of AM parts. The higher surface roughness affects the fatigue performance of AM parts. Due to this reason, it is necessary to perform some post-processing operation on the printed parts.
+ 
+   Such internal defects and surface roughness can reduce the life cycle of the parts \cite{bauereiss2014defect}. Due to this sensitivity of life cycle of  AM part, it is necessary to collect information regarding such defects before quantifying the AM part application. In this presented work defects such as pores, lack fo fusion and inclusion are taken in to consideration. 
+   
+   Recent development in Computer Tomography enable it to become a useful tool to investigate such defects. As mentioned in previous section, information regarding such defects prior to mechanical testing will allows us to understand more about effects of defects.
+  \section{Computer Tomography data} 
+  
+Computer Tomography (CT)  have a wide spectrum of application in medical imaging as well  in the field of material science. It is considered as a backbone of the medical imaging and have many other application like complex bone fracture analyzing to brain tumor detection. 
+
+In CT, X-ray measurements of an object  at  different angles  are taken to record the projection data. Such projections are later used to construct a cross sectional image at multiple height levels using Image reconstruction \cite{seeram2015computed}. The image data obtained from a CT scan of an AM part can be analyzed layer by layer to derive information regarding defects.
+
+In presented work, a specimen of Ti6Al4V manufactured using AM process was examined using computerized tomography having resolution of 15 $\mu$m. In particular, the specimen under consideration is one of the fatigue coupon analyzed in Airbus  project named  Effects of Defects on Additive Manufactured part (EDAM). 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3.5in]{Chapter1/Figs/coupon.png}
+	\caption{Final dimensions of a machined tensile coupon}
+	\label{fig:coupon}
+\end{figure} 
+
+This experiment was carried out by a company named Tiesta and the parameters of CT scan were not disclosed. The test coupon is printed in Airbus facilities and further information regrading test samples will be provided in later version of report. CT scan data from this experiment is used to detect internal defects in the test coupon.The procedures to detect defects are explained in following sections and  in Chapter 2.
+
+
+
+
+
+\section{Defect detection by image processing}
+
+  Several machine learning and image processing algorithms were trained in the past decade to evaluate the results from CT scan.\cite{breastcancer,li2018orthopedic,review}. In \cite{review}, a deep learning approach is used to detect tumor in the brain scan data. An artificial neural network is trained to detect multiple types of tumors. 
+ 
+ As an example, in Fig. \ref{fig:watershed} a watershed technique is used to detect tumor from brain scan data. In this method, pixels having pixel intensities similar to tumor are segregated from entire micrograph(image from CT scan) using pixel thresholding. And such pixels are grouped as a tumor region using the watershed technique.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3in]{Chapter1/Figs/tumor_watershed}
+	\caption{Brain Tumor detected from brain scan data using pixel thresholding and watershed technique \cite{watershed}}
+	\label{fig:watershed}
+\end{figure}
+
+A typical brain tumor can be seen as a bright spot and a similar approach can be applied in material science to evaluate defects. Anomalies such as pores and inclusions, when evaluated by CT scan, maybe analyze in a similar way as tumors.
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=2.33in]{Chapter1/Figs/top1_view_nofiltered1009.jpg}}
+	\hfill
+	\subfloat{\includegraphics[width=2.5in]{Chapter1/Figs/Detected_Inclusion.png}}
+	
+	\caption{\textbf{(a)}Expected pore in a specimen manufactured from Ti6Al4V  using additive manufacturing process, \textbf{(b)}Expected inclusion in a specimen manufactured from Ti6Al4V using additive manufacturing process}
+	\hfill
+	\label{fig:poreinclu}
+\end{figure}
+
+In figure \ref{fig:poreinclu}, two typical layers of the CT scan of the specimen mentioned above are shown. As depicted in figure \textbf{(a)} \ref{fig:poreinclu}, a pore in a typical CT scan of a material can be seen as a black spot. And an inclusion can be seen as a bright spot as depicted in figure \textbf{(b)} \ref{fig:poreinclu}.
+
+Currently, the defect detection process is usually done manually by an inspector who going though the whole scan adapts for each layer the different visualization parameters to identify potential defects. This method is repetitive and time-consuming and this drives a need to develop an automatic process to analyze such defects. In order to detect defects in CT scan images automatically, an image segmentation technique must be used.
+
+Image data obtained from a CT scan is in RGB format. This data is later transformed into grayscale. A grayscale image only has one channel of gray intensities. An object, for instance, pore has a unique range of grayscale intensities and this property can be used for image segmentation. Pixel thresholding is a tool to perform this operation. 
+
+\paragraph{Pixel thresholding}
+
+
+
+Pixel thresholding is a method for image segmentation, widely used to classify objects on the basis of their pixel intensity. In a significant amount of image processing application, a specific range of grayscale intensity belongs to a particular object class. And such a range is different from the back-ground. Segmentation of such object becomes evident with the help of thresholding \cite{creighton}. 
+
+Grayscale images from CT scan have grayscale intensities ranging of $0$ to $255$ as the images are stored in 8bit configuration. For successful image segmentation, a pixel intensity threshold for a specific class must be assigned. 
+
+In presented work, a  range of pixel intensities is assigned to a particular object class. Pixels having intensities similar to such range are segregated and assigned to that class.
+
+\begin{comment}
+ In \cite{creighton}, authors mentions several pixel thresholding techniques and provides a comparison in terms of their results and performance on different type of images. In their review work, they described pixel thresholding techniques such as histogram shape based thresholding in which peaks and valleys of the smoothed histogram is taken in to consideration for evaluation of threshold value. In cluster based thresholding, pixel data is clustered strictly in two groups namely foreground and back-ground. Entropy based thresholding is an another way for evaluation of pixel threshold for two major groups, back-ground and foreground. Here entropy and cross entropy of both groups are taken in to consideration. 
+\end{comment}
+
+For a given CT scan images, it is intricate to distinguish between material and defect class. In figure \ref{fig:pixdist} a pixel intensity distribution of an image obtained from CT scan data of a test coupon is shown. A bi-modal distribution depicted in figure \ref{fig:pixdist}, may be seen as a clear distinction between the two major classes, back-ground and fore-ground. Pixel intensity value at the valleys of such distribution, highlighted in figure, can be used to obtain the upper and lower threshold for each pixel data class.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4.5in]{Chapter1/Figs/dist_org1.png}
+	\caption{Pixel distribution on an image taken from a CT scan data from test coupon manufactured by AM.}
+	\label{fig:pixdist}
+\end{figure}
+
+For instance, pixel intensity at valleys of the first mode yields an upper and lower threshold limit for the back-ground class. Valleys of the second mode provide threshold limits for material/fore-ground class. Pixel intensities at valleys between two modes (see figure \ref{fig:pixdist}) can be seen as a lower and upper threshold for pore class. The manual inspection of an image can further improve the ranges and also provide information regarding inclusion class.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5in]{Chapter3/Figs/PT.png}
+	\caption{Schematics of Pixel thresholding }
+	\label{fig:workflow}
+\end{figure}
+
+A simplified scheme used to perform pixel thresholding is depicted in figure \ref{fig:workflow}. In this scheme information regarding the threshold from different classes are obtained from the distribution of pixel intensities and from manual inspection. Such thresholds are applied on input image data to get a final segmented image as depicted in figure \ref{fig:PT_result}. 
+
+In the binarization process, a grayscale image is transformed into a black and white(binary) image using a specific threshold range. The segmented image is binarized into two binary images using the threshold ranges for pore class and inclusion class obtained from pixel distribution analysis. A binary image obtains from a threshold range of pore class contain information regarding pores. Similarly, a binary image extracted from an inclusion class threshold range has information about inclusions. All such binary images from a specimen are analyzed to extract information regarding pores and inclusion.
+
+Although, the pixel thresholding ranges obtain for a given specimen cannot be used to for another specimen. Moreover, threshold ranges obtained from such procedure are largely dependent on the user's perspective and may vary. Apart from poor reproducibility, this method has a few other limitations which are explained in the next section.
+
+For a given CT scan images, pixel threshold ranges are listed in the table \ref{classrange}.
+
+\begin{table}[H]
+	 \centering
+	
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Class} &\textbf{Lower threshold} &\textbf{Upper thershold}  \\
+		\hline
+		
+		Background & 0 & 54\\
+		\hline
+		Pore & 55 & 69 \\
+		\hline
+		Material & 70 & 88 \\
+		\hline
+		Inclusion& 89 & 180 \\
+		\hline
+	\end{tabular}
+	\caption{Pixel intensity ranges for different classes}
+	\label{classrange}
+\end{table}
+
+
+
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=3.5in]{Chapter1/Figs/result_PT.png}
+	\caption{Result from Pixel thresholding with ROI, \textbf{(a)} Legitimate pore detected}
+	\label{fig:PT_result}
+\end{figure}
+
+\section{Drive for Machine Learning}
+Pixel thresholding is a robust algorithm which can be used to detect defects like inclusion and pores as explained above. For a new sample, a completely new analysis must be made on the histogram to obtain threshold ranges for different classes.
+
+\begin{figure}
+	\centering
+	\subfloat[Result from poor thresholding]{\includegraphics[width=2.5in]{Chapter1/Figs/faultyPT.png}}
+	\hfill
+	\subfloat[Miss clasification of data even with good thresholding range]{\includegraphics[width=2.5in]{Chapter1/Figs/misclassification.png}}
+	\caption{Limitations of Pixel thresholding[\textbf{(a)} (a) Legitimated pore detected,(b) False classification due to poor thresholding; \textbf{(b)} (a) Legitimate pore detected, (b) False classification even with good threshold]}
+	\label{fig:Lim_pix_threshold}
+\end{figure}
+
+Pixels located near the transition between material and background can have an intensities range similar to defects such as pore. And in pixel thresholding these pixels which belong to material class could falsely be classified as a pore, as depicted in figure \ref{fig:Lim_pix_threshold} \textbf{(a)}. Although with a good threshold approximation some pixel near the transition area is falsely classified as pores. A typical example of such miss classification can be seen in figure \ref{fig:Lim_pix_threshold} \textbf{(b)}.
+
+
+To reduce the miss classification of the data, pixels near the transition must be avoided. In order to eliminate the pixel at transition, a Region of Interest(ROI) is defined enclosing complete object except for borders. The result from such a combination of pixel thresholding and ROI is depicted in figure \ref{fig:PT_result}. 
+
+In a complex geometry, the shape of sample changes with respect to height levels. For a complete analysis, the user must provide multiple ROI at different layers, which is impossible for a large data set. For instance, the shape of a tapered cone type sample will be different as height level changes. In order to remove the pixels belongs to the border of the samples multiple ROIs must be selected at different heights.
+  
+Presence of some CT scan artifacts such as beam hardening and scatter, Poisson noise and ringing effect may also result in false data classification \cite{CTartifacts}. Such artifacts change the pixel intensity range within the same class, and this results in different threshold range. Effects of some artifacts may be normalized by using some traditional image filters such as Gaussian filter and median filter. But the application of such filters may alter the information regarding defects and application of such filters does no guaranteed better results.
+
+ To improve the quality of the result and to eliminate the need for ROI, Machine Learning (ML) approach is used. Three ML models are trained to detect defects and their accuracy are checked.
+
